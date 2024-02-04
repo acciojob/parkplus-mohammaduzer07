@@ -26,7 +26,7 @@ public class PaymentServiceImpl implements PaymentService {
         if(amountSent < bill){
             throw new Exception("Insufficient Amount");
         }
-        if(!mode.toUpperCase().equals("CASH") || !mode.toUpperCase().equals("CARD") || !mode.toUpperCase().equals("UPI")){
+        if(!mode.toUpperCase().equals("CASH") && !mode.toUpperCase().equals("CARD") && !mode.toUpperCase().equals("UPI")){
             throw new Exception("Payment mode not detected");
         }
 
